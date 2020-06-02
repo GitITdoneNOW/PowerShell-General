@@ -18,8 +18,8 @@ function main {
 function Update-Windows-Configuration {
     Write-Host 'Configuring Windows'
 
-    choco upgrade -y taskbar-winconfig --params "'/LOCATION:top /SIZE:small /LOCKED:yes /COMBINED:no /CORTANA:icon /AUTOTRAY:no /USEPOWERSHELL:no'"
-    choco upgrade -y desktopicons-winconfig --params "'/Desktop:YES /UserFiles:YES /ControlPanel:NO /Network:NO /RecycleBin:YES /OneDrive:NO'"
+    choco upgrade -y taskbar-winconfig --params "'/LOCATION:top /SIZE:small /LOCKED:yes /COMBINED:no /CORTANA:icon /AUTOTRAY:no /USEPOWERSHELL:YES'"
+    choco upgrade -y desktopicons-winconfig --params "'/Desktop:YES /UserFiles:YES /ControlPanel:NO /Network:YES /RecycleBin:YES /OneDrive:YES'"
     choco upgrade -y explorer-winconfig --params "'/SHOWEXTENSIONS:yes /SHOWFULLPATH:yes /SHOWENCRYPTED:yes /SHOWCHECKBOXES:no /USESHARINGWIZARD:no /USEVIEW:details'"
 }
 
@@ -143,6 +143,8 @@ function Install-DevTools {
     #choco upgrade -y git
 
     #choco upgrade -y git-fork
+    
+    choco upgrade -y github-desktop
 
     #choco upgrade -y vscode
 
