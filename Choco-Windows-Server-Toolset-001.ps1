@@ -2,6 +2,8 @@ function main {
     
     Update-Windows-Configuration
 
+    Install-DevTools
+        
     Install-Utils
 
     Install-Browsers
@@ -10,92 +12,92 @@ function main {
 
     Install-ProductivityTools
 
-    Install-DevTools
+    #Install-DevTools
 }
 
 function Update-Windows-Configuration {
     Write-Host 'Configuring Windows'
 
-    choco install -y taskbar-winconfig --params "'/LOCATION:top /SIZE:small /LOCKED:yes /COMBINED:no /CORTANA:icon /AUTOTRAY:no /USEPOWERSHELL:no'"
-    choco install -y desktopicons-winconfig --params "'/Desktop:YES /UserFiles:YES /ControlPanel:NO /Network:NO /RecycleBin:YES /OneDrive:NO'"
-    choco install -y explorer-winconfig --params "'/SHOWEXTENSIONS:yes /SHOWFULLPATH:yes /SHOWENCRYPTED:yes /SHOWCHECKBOXES:no /USESHARINGWIZARD:no /USEVIEW:details'"
+    choco upgrade -y taskbar-winconfig --params "'/LOCATION:top /SIZE:small /LOCKED:yes /COMBINED:no /CORTANA:icon /AUTOTRAY:no /USEPOWERSHELL:no'"
+    choco upgrade -y desktopicons-winconfig --params "'/Desktop:YES /UserFiles:YES /ControlPanel:NO /Network:NO /RecycleBin:YES /OneDrive:NO'"
+    choco upgrade -y explorer-winconfig --params "'/SHOWEXTENSIONS:yes /SHOWFULLPATH:yes /SHOWENCRYPTED:yes /SHOWCHECKBOXES:no /USESHARINGWIZARD:no /USEVIEW:details'"
 }
 
 function Install-Utils {
     
     Write-Host 'Installing Utils'
 
-    choco install -y 7zip.install
+    choco upgrade -y 7zip.install
     
-    #choco install -y adobereader
+    #choco upgrade -y adobereader
        
-    #choco install -y aria2
+    #choco upgrade -y aria2
     
-    choco install -y bulkrenameutility
+    choco upgrade -y bulkrenameutility
     
-    choco install -y ccleaner
+    choco upgrade -y ccleaner
 
-    choco install -y ditto
+    choco upgrade -y ditto
     
-    #choco install -y fastcopy
+    #choco upgrade -y fastcopy
     
-    #choco install -y ffmpeg
+    #choco upgrade -y ffmpeg
 
-    choco install -y greenshot
+    choco upgrade -y greenshot
 
-    #choco install -y handbrake
+    #choco upgrade -y handbrake
     
-    choco install -y iperf3
+    choco upgrade -y iperf3
     
-    #choco install -y irfanview
+    #choco upgrade -y irfanview
 
-    #choco install -y irfanviewplugins
+    #choco upgrade -y irfanviewplugins
     
-    #choco install -y jre8
+    #choco upgrade -y jre8
 
-    choco install -y mremoteng
+    choco upgrade -y mremoteng
 
-    choco install -y nmap
+    choco upgrade -y nmap
     
-    #choco install -y nordvpn
+    #choco upgrade -y nordvpn
     
-    #choco install -y notepadplusplus
+    #choco upgrade -y notepadplusplus
 
-    choco install -y powertoys
+    choco upgrade -y powertoys
     
-    choco install -y powershell-core
+    choco upgrade -y powershell-core
     
-    choco install -y putty.install
+    choco upgrade -y putty.install
     
-    choco install -y qbittorrent
+    choco upgrade -y qbittorrent
 
-    choco install -y rufus
+    choco upgrade -y rufus
     
-    #choco install -y sql-server-management-studio
+    #choco upgrade -y sql-server-management-studio
     
-    choco install sysinternals
+    choco upgrade -y sysinternals
     
-    choco install -y teracopy
+    choco upgrade -y teracopy
     
-    choco install -y testdisk-photorec
+    choco upgrade -y testdisk-photorec
     
-    #choco install -y tightvnc
+    #choco upgrade -y tightvnc
     
-    choco install -y treesizefree
+    choco upgrade -y treesizefree
     
-    choco install -y vlc
+    choco upgrade -y vlc
     
-    choco install -y vmwarevsphereclient
+    choco upgrade -y vmwarevsphereclient
     
-    choco install -y winpcap
+    choco upgrade -y winpcap
     
-    choco install -y winscp.install
+    choco upgrade -y winscp.install
     
-    choco install -y wireshark
+    choco upgrade -y wireshark
     
-    #choco install -y vlc
+    #choco upgrade -y vlc
 
-    #choco install -y youtube-dl
+    #choco upgrade -y youtube-dl
 
 }
 
@@ -103,15 +105,15 @@ function Install-Browsers {
 
     Write-Host 'Installing Browsers'
 
-    choco install -y firefox
+    choco upgrade -y firefox
 
-    #choco install -y googlechrome
+    #choco upgrade -y googlechrome
 
-    choco install -y microsoft-edge
+    choco upgrade -y microsoft-edge
     
-    choco install -y opera
+    choco upgrade -y opera
 
-    #choco install -y firefox-dev --pre 
+    #choco upgrade -y firefox-dev --pre 
 
 }
 
@@ -119,37 +121,37 @@ function Install-Fonts {
 
     Write-Host 'Installing Fonts'
 
-    choco install -y cascadiafonts
+    choco upgrade -y cascadiafonts
 
-    choco install -y firacode
+    choco upgrade -y firacode
 }
 
 function Install-DevTools {
     
     Write-Host 'Installing Dev Tools'
 
-    choco install -y dotnetcore-sdk
+    choco upgrade -y dotnetcore-sdk
     
-    choco install -y powershell-core
+    choco upgrade -y powershell-core
 
-    choco install -y microsoft-windows-terminal
+    choco upgrade -y microsoft-windows-terminal
 
-    #choco install -y git
+    #choco upgrade -y git
 
-    #choco install -y git-fork
+    #choco upgrade -y git-fork
 
-    #choco install -y vscode
+    #choco upgrade -y vscode
 
-    #choco install -y docker-desktop
+    #choco upgrade -y docker-desktop
     
-    #choco install -y azure-data-studio
+    #choco upgrade -y azure-data-studio
 
 }
 
 function Install-ProductivityTools{
-    #choco install -y notion
+    #choco upgrade -y notion
     
-    choco install -y notepadplusplus
+    choco upgrade -y notepadplusplus
 }
 
 main
