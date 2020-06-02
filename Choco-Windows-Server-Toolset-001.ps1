@@ -96,6 +96,8 @@ function Install-Utils {
     choco upgrade -y wireshark
     
     #choco upgrade -y vlc
+    
+    choco upgrade -y vmware-tools
 
     #choco upgrade -y youtube-dl
 
