@@ -18,88 +18,88 @@ function main {
 function Update-Windows-Configuration {
     Write-Host 'Configuring Windows'
 
-    choco upgrade -y taskbar-winconfig --params "'/LOCATION:top /SIZE:small /LOCKED:yes /COMBINED:no /CORTANA:icon /AUTOTRAY:no /USEPOWERSHELL:YES'"
-    choco upgrade -y desktopicons-winconfig --params "'/Desktop:YES /UserFiles:YES /ControlPanel:NO /Network:YES /RecycleBin:YES /OneDrive:YES'"
-    choco upgrade -y explorer-winconfig --params "'/SHOWEXTENSIONS:yes /SHOWFULLPATH:yes /SHOWENCRYPTED:yes /SHOWCHECKBOXES:no /USESHARINGWIZARD:no /USEVIEW:details'"
+    choco upgrade -y --exit-when-reboot-detected taskbar-winconfig --params "'/LOCATION:top /SIZE:small /LOCKED:yes /COMBINED:no /CORTANA:icon /AUTOTRAY:no /USEPOWERSHELL:YES'"
+    choco upgrade -y --exit-when-reboot-detected desktopicons-winconfig --params "'/Desktop:YES /UserFiles:YES /ControlPanel:NO /Network:YES /RecycleBin:YES /OneDrive:YES'"
+    choco upgrade -y --exit-when-reboot-detected explorer-winconfig --params "'/SHOWEXTENSIONS:yes /SHOWFULLPATH:yes /SHOWENCRYPTED:yes /SHOWCHECKBOXES:no /USESHARINGWIZARD:no /USEVIEW:details'"
 }
 
 function Install-Utils {
     
     Write-Host 'Installing Utils'
 
-    choco upgrade -y 7zip.install
+    choco upgrade -y --exit-when-reboot-detected 7zip.install
     
-    #choco upgrade -y adobereader
+    #choco upgrade -y --exit-when-reboot-detected adobereader
        
-    #choco upgrade -y aria2
+    #choco upgrade -y --exit-when-reboot-detected aria2
     
-    choco upgrade -y bulkrenameutility
+    choco upgrade -y --exit-when-reboot-detected bulkrenameutility
     
-    choco upgrade -y ccleaner
+    choco upgrade -y --exit-when-reboot-detected ccleaner
 
-    choco upgrade -y ditto
+    choco upgrade -y --exit-when-reboot-detected ditto
     
-    #choco upgrade -y fastcopy
+    #choco upgrade -y --exit-when-reboot-detected fastcopy
     
-    #choco upgrade -y ffmpeg
+    #choco upgrade -y --exit-when-reboot-detected ffmpeg
 
-    choco upgrade -y greenshot
+    choco upgrade -y --exit-when-reboot-detected greenshot
 
-    #choco upgrade -y handbrake
+    #choco upgrade -y --exit-when-reboot-detected handbrake
     
-    choco upgrade -y iperf3
+    choco upgrade -y --exit-when-reboot-detected iperf3
     
-    #choco upgrade -y irfanview
+    #choco upgrade -y --exit-when-reboot-detected irfanview
 
-    #choco upgrade -y irfanviewplugins
+    #choco upgrade -y --exit-when-reboot-detected irfanviewplugins
     
-    #choco upgrade -y jre8
+    #choco upgrade -y --exit-when-reboot-detected jre8
 
-    choco upgrade -y mremoteng
+    choco upgrade -y --exit-when-reboot-detected mremoteng
 
-    choco upgrade -y nmap
+    choco upgrade -y --exit-when-reboot-detected nmap
     
-    #choco upgrade -y nordvpn
+    #choco upgrade -y --exit-when-reboot-detected nordvpn
     
-    #choco upgrade -y notepadplusplus
+    #choco upgrade -y --exit-when-reboot-detected notepadplusplus
 
-    choco upgrade -y powertoys
+    choco upgrade -y --exit-when-reboot-detected powertoys
     
-    choco upgrade -y powershell-core
+    choco upgrade -y --exit-when-reboot-detected powershell-core
     
-    choco upgrade -y putty.install
+    choco upgrade -y --exit-when-reboot-detected putty.install
     
-    choco upgrade -y qbittorrent
+    choco upgrade -y --exit-when-reboot-detected qbittorrent
 
-    choco upgrade -y rufus
+    choco upgrade -y --exit-when-reboot-detected rufus
     
-    #choco upgrade -y sql-server-management-studio
+    #choco upgrade -y --exit-when-reboot-detected sql-server-management-studio
     
-    choco upgrade -y sysinternals
+    choco upgrade -y --exit-when-reboot-detected sysinternals
     
-    choco upgrade -y teracopy
+    choco upgrade -y --exit-when-reboot-detected teracopy
     
-    choco upgrade -y testdisk-photorec
+    choco upgrade -y --exit-when-reboot-detected testdisk-photorec
     
-    #choco upgrade -y tightvnc
+    #choco upgrade -y --exit-when-reboot-detected tightvnc
     
-    choco upgrade -y treesizefree
+    choco upgrade -y --exit-when-reboot-detected treesizefree
     
-    choco upgrade -y vlc
+    choco upgrade -y --exit-when-reboot-detected vlc
     
-    choco upgrade -y vmwarevsphereclient
+    choco upgrade -y --exit-when-reboot-detected vmwarevsphereclient
     
-    choco upgrade -y winpcap
+    choco upgrade -y --exit-when-reboot-detected winpcap
     
-    choco upgrade -y winscp.install
+    choco upgrade -y --exit-when-reboot-detected winscp.install
     
-    choco upgrade -y wireshark
+    choco upgrade -y --exit-when-reboot-detected wireshark
     
-    #choco upgrade -y vlc
+    #choco upgrade -y --exit-when-reboot-detected vlc
     
-    choco upgrade -y vmware-tools
+    choco upgrade -y --exit-when-reboot-detected vmware-tools
 
-    #choco upgrade -y youtube-dl
+    #choco upgrade -y --exit-when-reboot-detected youtube-dl
 
 }
 
@@ -107,15 +107,15 @@ function Install-Browsers {
 
     Write-Host 'Installing Browsers'
 
-    choco upgrade -y firefox
+    choco upgrade -y --exit-when-reboot-detected firefox
 
-    #choco upgrade -y googlechrome
+    #choco upgrade -y --exit-when-reboot-detected googlechrome
 
-    choco upgrade -y microsoft-edge
+    choco upgrade -y --exit-when-reboot-detected microsoft-edge
     
-    choco upgrade -y opera
+    choco upgrade -y --exit-when-reboot-detected opera
 
-    #choco upgrade -y firefox-dev --pre 
+    #choco upgrade -y --exit-when-reboot-detected firefox-dev --pre 
 
 }
 
@@ -123,41 +123,41 @@ function Install-Fonts {
 
     Write-Host 'Installing Fonts'
 
-    choco upgrade -y cascadiafonts
+    choco upgrade -y --exit-when-reboot-detected cascadiafonts
 
-    choco upgrade -y firacode
+    choco upgrade -y --exit-when-reboot-detected firacode
 }
 
 function Install-DevTools {
     
     Write-Host 'Installing Dev Tools'
 
-    choco upgrade -y dotnetcore-sdk
+    choco upgrade -y --exit-when-reboot-detected dotnetcore-sdk
     
-    choco upgrade -y dotnetfx
+    choco upgrade -y --exit-when-reboot-detected dotnetfx
     
-    choco upgrade -y powershell-core
+    choco upgrade -y --exit-when-reboot-detected powershell-core
 
-    choco upgrade -y microsoft-windows-terminal
+    choco upgrade -y --exit-when-reboot-detected microsoft-windows-terminal
 
-    #choco upgrade -y git
+    #choco upgrade -y --exit-when-reboot-detected git
 
-    #choco upgrade -y git-fork
+    #choco upgrade -y --exit-when-reboot-detected git-fork
     
-    choco upgrade -y github-desktop
+    choco upgrade -y --exit-when-reboot-detected github-desktop
 
-    #choco upgrade -y vscode
+    #choco upgrade -y --exit-when-reboot-detected vscode
 
-    #choco upgrade -y docker-desktop
+    #choco upgrade -y --exit-when-reboot-detected docker-desktop
     
-    #choco upgrade -y azure-data-studio
+    #choco upgrade -y --exit-when-reboot-detected azure-data-studio
 
 }
 
 function Install-ProductivityTools{
-    #choco upgrade -y notion
+    #choco upgrade -y --exit-when-reboot-detected notion
     
-    choco upgrade -y notepadplusplus
+    choco upgrade -y --exit-when-reboot-detected notepadplusplus
 }
 
 main
