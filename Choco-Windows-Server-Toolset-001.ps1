@@ -132,6 +132,8 @@ function Install-DevTools {
 
     choco upgrade -y dotnetcore-sdk
     
+    choco upgrade -y dotnetfx
+    
     choco upgrade -y powershell-core
 
     choco upgrade -y microsoft-windows-terminal
