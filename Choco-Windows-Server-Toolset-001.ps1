@@ -13,6 +13,8 @@ function main {
     Install-ProductivityTools
 
     #Install-DevTools
+
+    Patch-Sysprep
 }
 
 function Update-Windows-Configuration {
@@ -158,6 +160,12 @@ function Install-ProductivityTools{
     #choco upgrade -y --exit-when-reboot-detected notion
     
     choco upgrade -y --exit-when-reboot-detected notepadplusplus
+}
+
+function Patch-Sysprep{
+    #read more here http://blog.buktenica.com/windows-management-framework-breaks-sysprep/
+    
+    New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\StreamProvider" -Name LastFullPayloadTime -Value 0 -PropertyType DWord -Force  
 }
 
 main
