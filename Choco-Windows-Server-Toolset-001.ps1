@@ -1,5 +1,7 @@
 function main {
     
+    Start-Logging
+    
     Update-Windows-Configuration
 
     Install-DevTools
@@ -15,6 +17,10 @@ function main {
     #Install-DevTools
 
     Patch-Sysprep
+}
+
+function Start-Logging{
+    Start-Transcript -OutputDirectory C:\temp\transcripts\ -IncludeInvocationHeader -NoClobber
 }
 
 function Update-Windows-Configuration {
