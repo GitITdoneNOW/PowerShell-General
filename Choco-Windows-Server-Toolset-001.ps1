@@ -20,11 +20,20 @@ function main {
 }
 
 function Start-Logging{
+    
     Start-Transcript -OutputDirectory C:\temp\transcripts\ -IncludeInvocationHeader -NoClobber
 }
 
 function Update-Windows-Configuration {
-    Write-Host 'Configuring Windows'
+    
+    Write-Host 
+        '
+        
+        
+        ###   Configuring Windows   ###  
+    
+
+        '
 
     choco upgrade -y --exit-when-reboot-detected taskbar-winconfig --params "'/LOCATION:top /SIZE:small /LOCKED:yes /COMBINED:no /CORTANA:icon /AUTOTRAY:no /USEPOWERSHELL:YES'"
     choco upgrade -y --exit-when-reboot-detected desktopicons-winconfig --params "'/Desktop:YES /UserFiles:YES /ControlPanel:NO /Network:YES /RecycleBin:YES /OneDrive:YES'"
@@ -33,7 +42,14 @@ function Update-Windows-Configuration {
 
 function Install-Utils {
     
-    Write-Host 'Installing Utils'
+    Write-Host 
+        '
+        
+        
+        ###   Utility Software  ###  
+    
+
+        '
 
     choco upgrade -y --exit-when-reboot-detected 7zip.install
     
@@ -113,7 +129,15 @@ function Install-Utils {
 
 function Install-Browsers {
 
-    Write-Host 'Installing Browsers'
+    Write-Host 
+    
+        '
+        
+        
+        ###   Internet Browsers   ###
+    
+    
+        '
 
     choco upgrade -y --exit-when-reboot-detected firefox
 
@@ -129,7 +153,15 @@ function Install-Browsers {
 
 function Install-Fonts {
 
-    Write-Host 'Installing Fonts'
+    Write-Host 
+    
+        '
+        
+        
+        ###   Installing Fonts   ###
+    
+
+        '
 
     choco upgrade -y --exit-when-reboot-detected cascadiafonts
 
@@ -138,7 +170,15 @@ function Install-Fonts {
 
 function Install-DevTools {
     
-    Write-Host 'Installing Dev Tools'
+    Write-Host 
+    
+        '
+        
+        
+        ###   Dev Tools   ###
+    
+    
+        '
 
     choco upgrade -y --exit-when-reboot-detected dotnetcore-sdk
     
@@ -163,6 +203,14 @@ function Install-DevTools {
 }
 
 function Install-ProductivityTools{
+    Write-Host 
+        '
+        
+        
+        ###   Instaling Productivity Tools   ###
+        
+    
+        '
     #choco upgrade -y --exit-when-reboot-detected notion
     
     choco upgrade -y --exit-when-reboot-detected notepadplusplus
