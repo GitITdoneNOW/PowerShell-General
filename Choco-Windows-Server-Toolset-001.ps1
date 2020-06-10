@@ -89,6 +89,8 @@ function Install-Utils {
 
     choco upgrade -y --exit-when-reboot-detected powertoys
     
+    choco upgrade -y --exit-when-reboot-detected powershell
+    
     choco upgrade -y --exit-when-reboot-detected powershell-core
     
     choco upgrade -y --exit-when-reboot-detected putty.install
